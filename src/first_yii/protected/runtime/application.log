@@ -1,0 +1,12 @@
+2015/01/15 15:20:31 [error] [php] mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() (C:\Users\abc54396\git\phptest\src\first_yii\protected\controllers\SiteController.php:67)
+Stack trace:
+#0 C:\Users\abc54396\git\phptest\yii-1.1.16.bca042\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\Users\abc54396\git\phptest\yii-1.1.16.bca042\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\Users\abc54396\git\phptest\yii-1.1.16.bca042\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\Users\abc54396\git\phptest\yii-1.1.16.bca042\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\Users\abc54396\git\phptest\yii-1.1.16.bca042\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\Users\abc54396\git\phptest\yii-1.1.16.bca042\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\Users\abc54396\git\phptest\src\first_yii\index.php(13): CWebApplication->run()
+REQUEST_URI=/first_yii/site/contact
+in C:\Users\abc54396\git\phptest\src\first_yii\protected\controllers\SiteController.php (67)
+in C:\Users\abc54396\git\phptest\src\first_yii\index.php (13)
