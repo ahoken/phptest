@@ -1,53 +1,53 @@
-&lt;h1&gt;Console Command Generator&lt;/h1&gt;
-&lt;?php $form = $this-&gt;beginWidget('CCodeForm',
-array('model'=&gt;$model)); ?&gt;
-&lt;div class='row' &gt;
-&lt;?php echo $form-&gt;labelEx($model, 'command'); ?&gt;
-&lt;?php echo $form-&gt;textField($model, 'command',
-array('size'=&gt;45)); ?&gt;
-&lt;div class='tooltip'&gt;
+<h1>Console Command Generator</h1>
+<?php $form = $this->beginWidget('CCodeForm',
+array('model'=>$model)); ?>
+<div class='row' >
+<?php echo $form->labelEx($model, 'command'); ?>
+<?php echo $form->textField($model, 'command',
+array('size'=>45)); ?>
+<div class='tooltip'>
 Command must only contain word characters and hyphens
-&lt;/div&gt;
+</div>
  
-&lt;?php echo $form-&gt;error($model, 'command'); ?&gt;
-&lt;/div&gt;
+<?php echo $form->error($model, 'command'); ?>
+</div>
  
-&lt;div class='row' &gt;
-&lt;?php echo $form-&gt;labelEx($model, 'className'); ?&gt;
-&lt;?php echo $form-&gt;textField($model, 'className',
-array('size'=&gt;45,'readonly'=&gt;'readonly')); ?&gt;
-&lt;div class='tooltip'&gt;
+<div class='row' >
+<?php echo $form->labelEx($model, 'className'); ?>
+<?php echo $form->textField($model, 'className',
+array('size'=>45,'readonly'=>'readonly')); ?>
+<div class='tooltip'>
 Class name must only contain word characters
-&lt;/div&gt;
-&lt;?php echo CHtml::checkBox('autoClassName', true,
-		array('id'=&gt;'autoClassName')); ?&gt; Auto
-		&lt;?php echo $form-&gt;error($model, 'className'); ?&gt;
-		&lt;/div&gt;
+</div>
+<?php echo CHtml::checkBox('autoClassName', true,
+		array('id'=>'autoClassName')); ?> Auto
+		<?php echo $form->error($model, 'className'); ?>
+		</div>
 		 
-		&lt;div class=&quot;row sticky&quot;&gt;
-		&lt;?php echo $form-&gt;labelEx($model,'scriptPath'); ?&gt;
-		&lt;?php echo $form-&gt;textField($model,'scriptPath',
-		array('size'=&gt;45)); ?&gt;
-		&lt;div class=&quot;tooltip&quot;&gt;
+		<div class=&quot;row sticky&quot;>
+		<?php echo $form->labelEx($model,'scriptPath'); ?>
+		<?php echo $form->textField($model,'scriptPath',
+		array('size'=>45)); ?>
+		<div class=&quot;tooltip&quot;>
 		This refers to the directory that contains your console
 		commands. It should be specified in the form of a path alias,
-		for example, &lt;code&gt;application.commands&lt;/code&gt;
-		or &lt;code&gt;application.extensions&lt;/code&gt;.
-		&lt;/div&gt;
-		&lt;?php echo $form-&gt;error($model,'scriptPath'); ?&gt;
-		&lt;/div&gt;
+		for example, <code>application.commands</code>
+		or <code>application.extensions</code>.
+		</div>
+		<?php echo $form->error($model,'scriptPath'); ?>
+		</div>
 		 
-		&lt;div class='row template sticky'&gt;
-		&lt;?php echo $form-&gt;labelEx($model, 'baseClassName'); ?&gt;
-		&lt;?php echo $form-&gt;dropDownList($model, 'baseClassName',
+		<div class='row template sticky'>
+		<?php echo $form->labelEx($model, 'baseClassName'); ?>
+		<?php echo $form->dropDownList($model, 'baseClassName',
 		array(
-		'CConsoleCommand'=&gt;'CConsoleCommand',
-		)); ?&gt;
-		&lt;/div&gt;
+		'CConsoleCommand'=>'CConsoleCommand',
+		)); ?>
+		</div>
 
-		&lt;?php $this-&gt;endWidget(); ?&gt;
+		<?php $this->endWidget(); ?>
 
-		&lt;script type=&quot;text/javascript&quot;&gt;
+		<script type=&quot;text/javascript&quot;>
 		function dashToCamel(str) {
 			return str.replace(/W+(.)/g, function (x, chr) {
 				return chr.toUpperCase();
@@ -56,8 +56,8 @@ Class name must only contain word characters
 
 		(function($){
 			var autoSet = true;
-			var prefix = &lt;?php echo CJSON::encode($model-&gt;classPrefix); ?&gt;;
-			var ucFirst = &lt;?php echo CJSON::encode($model-&gt;classUcFirst); ?&gt;;
+			var prefix = <?php echo CJSON::encode($model->classPrefix); ?>;
+			var ucFirst = <?php echo CJSON::encode($model->classUcFirst); ?>;
 
 			var $commandName = $('#CommandCode_command'),
 			$className = $('#CommandCode_className'),
@@ -91,4 +91,4 @@ Class name must only contain word characters
 					}
 				});
 		})(jQuery);
-		&lt;/script&gt;
+		</script>

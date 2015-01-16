@@ -1,11 +1,11 @@
-&lt;?php echo &quot;&lt;?phpn&quot;; ?&gt;
+<?php echo "<?phpn"; ?>
  
-class &lt;?php echo $this-&gt;className; ?&gt; extends
-&lt;?php echo $this-&gt;className.&quot;n&quot;; ?&gt;
+class <?php echo $this->className; ?> extends
+<?php echo $this->className."n"; ?>
 {
    public function getHelp()
    {
-       return &lt;?php echo &quot;&lt;&lt;&lt;&quot;; ?&gt;EOD
+       return <?php echo "<<<"; ?>EOD
 USAGE
    
  
