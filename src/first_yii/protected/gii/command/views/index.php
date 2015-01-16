@@ -12,8 +12,7 @@
 	<?php echo $form->labelEx($model, 'className'); ?>
 	<?php echo $form->textField($model, 'className', array('size'=>45,'readonly'=>'readonly')); ?>
 	<div class='tooltip'>Class name must only contain word characters</div>
-	<?php echo CHtml::checkBox('autoClassName', true, array('id'=>'autoClassName')); ?>
-	Auto
+	<?php echo CHtml::checkBox('autoClassName', true, array('id'=>'autoClassName')); ?> Auto<br>
 	<?php echo $form->error($model, 'className'); ?>
 </div>
 
