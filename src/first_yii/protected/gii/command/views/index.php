@@ -1,53 +1,44 @@
 <h1>Console Command Generator</h1>
-<?php $form = $this->beginWidget('CCodeForm',
-array('model'=>$model)); ?>
-<div class='row' >
-<?php echo $form->labelEx($model, 'command'); ?>
-<?php echo $form->textField($model, 'command',
-array('size'=>45)); ?>
-<div class='tooltip'>
-Command must only contain word characters and hyphens
-</div>
- 
-<?php echo $form->error($model, 'command'); ?>
-</div>
- 
-<div class='row' >
-<?php echo $form->labelEx($model, 'className'); ?>
-<?php echo $form->textField($model, 'className',
-array('size'=>45,'readonly'=>'readonly')); ?>
-<div class='tooltip'>
-Class name must only contain word characters
-</div>
-<?php echo CHtml::checkBox('autoClassName', true,
-		array('id'=>'autoClassName')); ?> Auto
-		<?php echo $form->error($model, 'className'); ?>
-		</div>
-		 
-		<div class=&quot;row sticky&quot;>
-		<?php echo $form->labelEx($model,'scriptPath'); ?>
-		<?php echo $form->textField($model,'scriptPath',
-		array('size'=>45)); ?>
-		<div class=&quot;tooltip&quot;>
-		This refers to the directory that contains your console
-		commands. It should be specified in the form of a path alias,
-		for example, <code>application.commands</code>
-		or <code>application.extensions</code>.
-		</div>
-		<?php echo $form->error($model,'scriptPath'); ?>
-		</div>
-		 
-		<div class='row template sticky'>
-		<?php echo $form->labelEx($model, 'baseClassName'); ?>
-		<?php echo $form->dropDownList($model, 'baseClassName',
-		array(
-		'CConsoleCommand'=>'CConsoleCommand',
-		)); ?>
-		</div>
+<?php $form = $this->beginWidget('CCodeForm', array('model'=>$model)); ?>
+<div class='row'>
+	<?php echo $form->labelEx($model, 'command'); ?>
+	<?php echo $form->textField($model, 'command', array('size'=>45)); ?>
+	<div class='tooltip'>Command must only contain word characters and hyphens</div>
 
-		<?php $this->endWidget(); ?>
+	<?php echo $form->error($model, 'command'); ?>
+</div>
 
-		<script type=&quot;text/javascript&quot;>
+<div class='row'>
+	<?php echo $form->labelEx($model, 'className'); ?>
+	<?php echo $form->textField($model, 'className', array('size'=>45,'readonly'=>'readonly')); ?>
+	<div class='tooltip'>Class name must only contain word characters</div>
+	<?php echo CHtml::checkBox('autoClassName', true, array('id'=>'autoClassName')); ?>
+	Auto
+	<?php echo $form->error($model, 'className'); ?>
+</div>
+
+<div class='rowsticky'>
+	<?php echo $form->labelEx($model,'scriptPath'); ?>
+	<?php echo $form->textField($model,'scriptPath', array('size'=>45)); ?>
+	<div class='tooltip'>
+		This refers to the directory that contains your console commands. It
+		should be specified in the form of a path alias, for example,
+		<code>application.commands</code>
+		or
+		<code>application.extensions</code>
+		.
+	</div>
+	<?php echo $form->error($model,'scriptPath'); ?>
+</div>
+
+<div class='row template sticky'>
+	<?php echo $form->labelEx($model, 'baseClassName'); ?>
+	<?php echo $form->dropDownList($model, 'baseClassName', array('CConsoleCommand'=>'CConsoleCommand',)); ?>
+</div>
+
+<?php $this->endWidget(); ?>
+
+<script type='text/javascript'>
 		function dashToCamel(str) {
 			return str.replace(/W+(.)/g, function (x, chr) {
 				return chr.toUpperCase();
@@ -77,18 +68,18 @@ Class name must only contain word characters
 				}
 			});
 
-				$autoToggle.click(function() {
-					autoSet = this.checked == true;
-					 
-					if (autoSet)
-					{
-						$className.attr('readonly', 'readonly');
-						$commandName.trigger('blur');
-					}
-					else
-					{
-						$className.removeAttr('readonly');
-					}
-				});
+			$autoToggle.click(function() {
+				autoSet = this.checked == true;
+				 
+				if (autoSet)
+				{
+					$className.attr('readonly', 'readonly');
+					$commandName.trigger('blur');
+				}
+				else
+				{
+					$className.removeAttr('readonly');
+				}
+			});
 		})(jQuery);
-		</script>
+</script>

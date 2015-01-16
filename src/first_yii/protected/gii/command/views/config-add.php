@@ -7,7 +7,7 @@ You may add the following to
 <br><br>
 <code>
 '$command' => array(<br>
-<nobr>&amp;nbsp;&amp;nbsp;&amp;nbsp;'class' => '$scriptPath.$command.$className',</nobr>
+<nobr>&nbsp;&nbsp;&nbsp;'class' => '$scriptPath.$command.$className',</nobr>
 <br>
 ),<br>
 </code>

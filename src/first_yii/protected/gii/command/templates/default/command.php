@@ -1,7 +1,6 @@
-<?php echo "<?phpn"; ?>
+<?php echo "<?php\n"; ?>
  
-class <?php echo $this->className; ?> extends
-<?php echo $this->className."n"; ?>
+class <?php echo $this->className; ?> extends <?php echo $this->className."\n"; ?>
 {
    public function getHelp()
    {
