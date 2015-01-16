@@ -112,7 +112,7 @@ class CPasswordHelper
 		self::checkBlowfish();
 		if(!is_string($password) || $password==='')
 			return false;
-
+		
 		if (!$password || !preg_match('{^\$2[axy]\$(\d\d)\$[\./0-9A-Za-z]{22}}',$hash,$matches) ||
 			$matches[1]<4 || $matches[1]>31)
 			return false;
