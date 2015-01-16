@@ -1,2 +1,2 @@
 # phptest
-php test
+php yii test
