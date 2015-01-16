@@ -8,6 +8,7 @@ return array(
 	// uncomment the following lines to use a MySQL database
 	'connectionString' => 'mysql:dbname=testdrive;host=localhost',
 	'emulatePrepare' => true,
+	'enableProfiling' => true, // 実行SQLの表示
 	'username' => 'test',
 	'password' => 'test',
 	'charset' => 'utf8',

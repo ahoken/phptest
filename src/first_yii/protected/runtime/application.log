@@ -1395,3 +1395,19 @@ Stack trace:
 REQUEST_URI=/first_yii/user/admin
 HTTP_REFERER=http://localhost/first_yii/site/index
 ---
+2015/01/16 11:47:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'リクエスト"error"を解決できません。' in C:\Users\abc54396\git\phptest\yii-1.1.16.bca042\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Users\abc54396\git\phptest\yii-1.1.16.bca042\framework\web\CWebApplication.php(141): CWebApplication->runController('error')
+#1 C:\Users\abc54396\git\phptest\yii-1.1.16.bca042\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\Users\abc54396\git\phptest\src\first_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/first_yii/error
+---
+2015/01/16 11:47:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'リクエスト"error_log"を解決できません。' in C:\Users\abc54396\git\phptest\yii-1.1.16.bca042\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Users\abc54396\git\phptest\yii-1.1.16.bca042\framework\web\CWebApplication.php(141): CWebApplication->runController('error_log')
+#1 C:\Users\abc54396\git\phptest\yii-1.1.16.bca042\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\Users\abc54396\git\phptest\src\first_yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/first_yii/error_log
+---

@@ -55,19 +55,37 @@ return array(
 			'errorAction'=>'site/error',
 		),
 
+		/**
+			CDbLogRoute: メッセージをデータベースに保存する
+			CEmailLogRoute: メッセージを指定されたメールアドレスに送信する
+			CFileLogRoute: メッセージをアプリケーションの runtime ディレクトリ以下にファイルとして保存する
+			CWebLogRoute: メッセージをウェブページの最後に表示する
+			CProfileLogRoute: プロファイルメッセージをウェブページ最後に表示する
+		 */
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
 				array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
+					'filter'=>'CLogFilter',
 				),
-				// uncomment the following to show log messages on web pages
-				/*
 				array(
-					'class'=>'CWebLogRoute',
+						'class'=>'CProfileLogRoute',
+						'report'=>'summary',
+						// マークした全てのコードブロックの実行時間を表示
+						// report を callstack に設定することも可能
 				),
-				*/
+// 				array(
+// 						'class'=>'CEmailLogRoute',
+// 						'levels'=>'error, warning',
+// 						'except'=>'system.CModule.*' // CModule のログ以外をすべてメールで送信
+// 						'emails'=>'admin@example.com',
+// 				),
+				// uncomment the following to show log messages on web pages
+// 				array(
+// 					'class'=>'CWebLogRoute',
+// 				),
 			),
 		),
 
