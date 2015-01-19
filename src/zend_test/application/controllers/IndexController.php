@@ -11,6 +11,8 @@ class IndexController extends Zend_Controller_Action
     public function indexAction()
     {
         // action body
+        $username =  Zend_Auth::getInstance()->getStorage()->read();
+    	$this->view->login_user = ($username!=NULL) ? $username->username : NULL;
     }
 
 

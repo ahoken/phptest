@@ -466,7 +466,7 @@ class Zend_Loader_PluginLoader implements Zend_Loader_PluginLoader_Interface
         }
         if (!file_exists($file) && file_exists(dirname($file)) && !is_writable(dirname($file))) {
             require_once 'Zend/Loader/PluginLoader/Exception.php';
-            throw new Zend_Loader_PluginLoader_Exception('Specified file is not writeable (' . $file . ')');
+            throw new Zend_Loader_PluginLoader_Exception('Specif	ied file is not writeable (' . $file . ')');
         }
 
         self::$_includeFileCache = $file;

@@ -38,16 +38,16 @@ class AuthController extends Zend_Controller_Action
 		}
 		//DB接続
 		$dbAdapter = Zend_Registry::get('db');
-		
-		$authAdapter = new Zend_Auth_Adapter_DbTable(
-				$dbAdapter,
-				self::AUTH_TABLE_NAME,	
-				self::AUTH_ID_NAME,
-				self::AUTH_PASS_NAME);
-		$authAdapter->setIdentity($username);
-		$authAdapter->setCredential($password);
+		$authAdapter =  new Zend_Auth_Adapter_DbTable($dbAdapter);
+		$authAdapter->setTableName(self::AUTH_TABLE_NAME)
+		->setIdentity($username)
+		->setIdentityColumn(self::AUTH_ID_NAME)
+		->setCredential($password)
+		->setCredentialColumn(self::AUTH_PASS_NAME)
+		->setCredentialTreatment('MD5(?)');
 		$result = $authAdapter->authenticate();
 		var_dump($result);
+		
 		// 認証する
 		if ($result->isValid() === FALSE) {
 			$this->view->error = 'ログイン情報が不正です。';
@@ -73,5 +73,13 @@ class AuthController extends Zend_Controller_Action
 		return $this->_forward('login-page');
 	}
 	
+	private function createSalt()
+	{
+		$dynamicSalt = null;
+		for ($i = 0; $i < 50; $i++) {
+			$dynamicSalt .= chr(rand(33, 126));
+		}
+		return $dynamicSalt;
+	}
 }
 

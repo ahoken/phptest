@@ -1,0 +1,12 @@
+<?php include_once 'Zend/Application/Resource/Frontcontroller.php'?>
+<?php include_once 'Zend/Application/Resource/View.php'?>
+<?php include_once 'Zend/Controller/Action/Helper/ViewRenderer.php'?>
+<?php include_once 'Zend/View/Helper/Doctype.php'?>
+<?php include_once 'Zend/Application/Resource/Layout.php'?>
+<?php include_once 'Zend/Application/Resource/Db.php'?>
+<?php include_once 'Zend/Filter/Word\CamelCaseToDash.php'?>
+<?php include_once 'Zend/Filter/StringToLower.php'?>
+<?php include_once 'Zend/View/Helper/HeadLink.php'?>
+<?php include_once 'Zend/View/Helper/Url.php'?>
+<?php include_once 'Zend/View/Helper/Layout.php'?>
+<?php include_once 'Zend/Application/Resource/Cachemanager.php'?>
