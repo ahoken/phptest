@@ -12,3 +12,4 @@ You may add the following to
 ),<br>
 </code>
 EOF;
+?>
