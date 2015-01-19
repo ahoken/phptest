@@ -1,4 +1,4 @@
-echo print <<< EOF
+<?php echo <<<EOF
 The console command has been generated.
 <br><br>
 You may add the following to 
