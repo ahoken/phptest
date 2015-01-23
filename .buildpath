@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildpath>
-	<buildpathentry kind="src" path=""/>
 	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+	<buildpathentry kind="con" path="org.eclipse.dltk.USER_LIBRARY/PEAR"/>
+	<buildpathentry external="true" kind="lib" path="C:/Users/abc54396/Desktop/sugi_work/php/phpunit-skelgen-2.0.0.phar"/>
+	<buildpathentry external="true" kind="lib" path="C:/Users/abc54396/Desktop/sugi_work/php/phpunit.phar"/>
+	<buildpathentry kind="src" path=""/>
 </buildpath>

@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+phpunit_config_file=/phptest/src/zend_test/tests/phpunit.xml
+preload_script=/phptest/src/zend_test/tests/bootstrap.php
+test_file_pattern=
+test_folders=/phptest/src/zend_test/tests
+testing_framework=PHPUnit
