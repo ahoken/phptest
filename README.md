@@ -1,2 +1,2 @@
 # phptest
-php yii test
+php frame work evaluate test
